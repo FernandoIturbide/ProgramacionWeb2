@@ -16,8 +16,15 @@ console.log(edad);
 var fer = "ITUA131DASWWE";
  */
 
-/* let uno = "Hola";
+let uno = "Hola";
 let dos = "Mundo";
+console.log(uno + " " + dos);
 let unir = uno + " " + dos;
-console.log(unir); */
-
+console.log(unir);
+let edad = 21;
+let edadString = String(edad);
+let nombre = "Fernando";
+let localidad = "Toluca";
+let altura = 1.60;
+let peso = 50;
+console.log("1. Mi nombre es " + nombre + "\n2. Tengo edad " + edad + " años\n3. Vivo en " + localidad + "\n4. Mido " + altura + "\n5. Peso " + peso + " kilogramos");

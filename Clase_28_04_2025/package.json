@@ -1,0 +1,12 @@
+{
+  "name": "clase_28_04_2025",
+  "version": "1.0.0",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": ["Node.js, server, https"],
+  "author": "Fernando Iturbide",
+  "license": "ISC",
+  "description": "Levantando mi primer servidor"
+}

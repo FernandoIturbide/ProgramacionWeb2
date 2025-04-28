@@ -13,22 +13,12 @@
 
     <div style="margin-top: 50px;" >
         <div>
-            <label>Nombre:</label>
+            <label>Telefono:</label>
                 <input type="text" id="input1" required maxlength="100" placeholder="Nombre completo" >
             
-            <label>Correo: </label>
-                <input type="email"  placeholder="Ingresa correo" id="input2" required>
-            <label > Institución</label>
-                <input type="text" id="input3"required  list="listaEscuelas" >
-                <datalist id="listaEscuelas" >
-                    <option value="UNAM">UNAM</option>
-                    <option value="IPN">Politecnico</option>
-                    <option value="ENAP">ENAP</option>
-                    <option value="ENBA">ENBA</option>
-
-                </datalist>
-            <label>Dependencia: </label>
-                <input type="text" required maxlength="255" id="input4">
+            <label>Texto: </label>
+                <input type="email"  placeholder="Texto a enviar" id="input2" required>
+        
             <br>
             <button onclick="generarQR()" >Generar QR</button>    
                 

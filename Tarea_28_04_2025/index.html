@@ -1,31 +1,27 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
     
     <header>
-        <h1>Generacion de QR</h1>
+        <h1>Enviar mensaje por whatsapp</h1>
     </header>
 
     <div style="margin-top: 50px;" >
         <div>
             <label>Telefono:</label>
-                <input type="text" id="input1" required maxlength="100" placeholder="Nombre completo" >
+                <input type="text" id="input1" required maxlength="100" placeholder="Telefono con número internacional. Ejemplo: 525576789234" >
             
             <label>Texto: </label>
-                <input type="email"  placeholder="Texto a enviar" id="input2" required>
-        
+                <textarea id="input2" placeholder="Texto a enviar" required></textarea>
+
             <br>
-            <button onclick="generarQR()" >Generar QR</button>    
-                
-            <div  style="text-align: center;" id="qr-code" >
-               <!-- Imagen de QR  -->
-                
-            </div>
+            <button onclick="Enviar()" >Enviar</button>    
         </div>
     </div>
 

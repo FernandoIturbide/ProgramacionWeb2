@@ -1,12 +1,10 @@
 const express = require('express');
-const path = require('path');
-
 const app = express();
-app.get('/', (req, res) => {
-  res.sendFile(path.join(__dirname, 'index.html'));
-});
+const PORT = 3000;
 
-const port = 3005;
-app.listen(port, () => {
-  console.log(`El servidor estápor el puerto http://localhost:${port}`);
+// Servir archivos estáticos
+app.use(express.static('public'));
+
+app.listen(PORT, () => {
+  console.log(`Servidor corriendo en http://localhost:${PORT}`);
 });

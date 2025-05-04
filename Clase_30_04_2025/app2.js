@@ -5,10 +5,10 @@ const express=require('express');
 const app=express();
 
 //Definición de puerto
-const port = 3009;
+const port = 4001;
 
 app.get('/',(req,res)=>{
-    res.send('Hola mundo desde el puerto 3009');
+    res.send('Hola mundo desde el puerto 4001');
 })
 
 app.listen(port);

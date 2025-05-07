@@ -3,21 +3,21 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Registro</title>
     <link rel="stylesheet" href="/styles.css">
 </head>
 <body>
-    <h1>Pagina registro</h1>
-    <form action="#" method="POST">
-        <label for="correo">Nombre</label>
-        <input type="email" name="correo" id="correo" placeholder="Escribe tu correo">
+    <h1>Pagina de registro</h1>
+    <form action="#" method="post">
+        <label for="name">Correo:</label>
+            <input type="email" name="correo" id="email" placeholder="Ingresa correo" required maxlength="45">
         <br><br>
         <label for="pass">Contraseña:</label>
-        <input type="password" name="pass" id="pass" maxlength="15" placeholder="Escribe tu contraseña">
+            <input type="password" name="pass" id="pass" maxlength="15" required placeholder="Ingresa tu pass">
         <br><br>
-        <button type="submit">Enviar</button>
-        <button type="reset">Limpiar</button>
+        <button type="submit">Enviar </button>
+        <button type="reset">Eliminar</button>
     </form>
-    <a href="/">Inicio</a>
+<a href="/">Inicio</a>
 </body>
 </html>

@@ -1,21 +1,20 @@
-//importar express
-const espress = require('express');
-//importar path
+//Importacion de express
+const express= require('express');
 const path = require('path');
-
-//intanciar express
-const app = espress();
+//instanaciar Express
+const app = express();
 
 //Puerto
 const port = 5656;
-app.get('/', (req, res) => {
-    // res.send('Hola Mundo desde Express');
-    // res.sendFile('C:/Users/ffera/Documents/Programación web 2/Clase_05_05_2025/index.html');
-    res.sendFile(path.join(__dirname+"/index.html"));
+
+app.get("/",(req,res)=>{
+
+    res.sendFile( path.join(__dirname+"/index.html"));
+
 });
 
-app.listen(port, () => {
-    console.log(`https://localhost:${port}`);
-});
 
+app.listen(port,()=>{
+    console.log(`http://127.0.0.1:${port}`);
+});
 

@@ -1,6 +1,6 @@
 //importar express
 const espress = require('express');
-const rutas = require('./routes/index.js');
+const rutas = require('./routes/index3.js'); //importar el modulo de rutas
 
 
 //intanciar express
@@ -10,10 +10,8 @@ const app = espress();
 app.use("/",rutas);
 
 //Puerto
-const port = 6565;
+const port = 8000;
 
 app.listen(port, () => {
     console.log(`https://localhost:${port}`);
 });
-
-

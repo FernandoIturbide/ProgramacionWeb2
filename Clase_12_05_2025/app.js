@@ -78,3 +78,34 @@ app.get('/edit/:id', (req, res) => {
     }
   });
 });
+
+//Actualizar un usuario
+app.post('/update/:id', (req, res) => {
+  const { id } = req.params;
+  const { name, email } = req.body;
+  const consulta = 'UPDATE usuarios SET name = ?, email = ? WHERE id = ?';
+  db.query(consulta, [name, email, id], (err, results) => {
+    if (err) {
+      console.error('Error al actualizar el usuario:', err);
+      res.send('No se pudo actualizar el usuario');
+      return;
+    }else{
+      res.redirect('/');
+    }
+  });
+});
+
+//Eliminar un usuario
+app.get('/delete/:id', (req, res) => {
+  const { id } = req.params;
+  const consulta = 'DELETE FROM usuarios WHERE id = ?';
+  db.query(consulta, [id], (err, results) => {
+    if (err) {
+      console.error('Error al eliminar el usuario:', err);
+      res.send('No se pudo eliminar el usuario');
+      return;
+    }else{
+      res.redirect('/');
+    }
+  });
+});

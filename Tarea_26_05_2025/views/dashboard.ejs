@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Dashboard</title>
+  <link rel="stylesheet" href="/styles.css">
+  <style>
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      margin-top: 20px;
+      background: white;
+      border-radius: 8px;
+      overflow: hidden;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+    }
+
+    th, td {
+      padding: 12px 20px;
+      text-align: left;
+    }
+
+    th {
+      background-color: #4a63e7;
+      color: white;
+    }
+
+    tr:nth-child(even) {
+      background-color: #f2f2f2;
+    }
+
+    .btn-action {
+      margin-right: 6px;
+      padding: 6px 12px;
+      border: none;
+      border-radius: 6px;
+      background-color: #4a63e7;
+      color: white;
+      text-decoration: none;
+      font-size: 14px;
+      transition: background-color 0.3s ease;
+    }
+
+    .btn-action:hover {
+      background-color: #354dc9;
+    }
+
+    .formulario {
+      margin-top: 30px;
+      background-color: #fff;
+      padding: 20px;
+      border-radius: 12px;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+    }
+
+    .container {
+      max-width: 900px;
+      width: 95%;
+      background-color: rgba(255, 255, 255, 0.95);
+      padding: 40px;
+      border-radius: 12px;
+      box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <h1>Usuarios registrados</h1>
+    <table>
+      <tr>
+        <th>ID</th>
+        <th>Nombre</th>
+        <th>Correo</th>
+        <th>Acciones</th>
+      </tr>
+      <% users.forEach(user => { %>
+        <tr>
+          <td><%= user.id %></td>
+          <td><%= user.name %></td>
+          <td><%= user.email %></td>
+          <td>
+            <a class="btn-action" href="/edit/<%= user.id %>">Editar</a>
+            <a class="btn-action" href="/delete/<%= user.id %>">Eliminar</a>
+          </td>
+        </tr>
+      <% }) %>
+    </table>
+
+    <h2>Agregar nuevo usuario</h2>
+    <form class="formulario" action="/add" method="post">
+      <label for="name">Nombre</label>
+      <input type="text" name="name" id="name" required maxlength="45" placeholder="Nombre del usuario">
+
+      <label for="email">Correo</label>
+      <input type="email" name="email" id="email" required maxlength="45" placeholder="Correo electrónico">
+
+      <button type="submit" class="btn">Agregar</button>
+    </form>
+  </div>
+</body>
+</html>

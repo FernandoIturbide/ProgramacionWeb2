@@ -1,0 +1,28 @@
+form{
+        border: 5px solid red;
+        border-radius: 5px;
+    }
+    .form{
+        margin: auto;
+        width: 350px;
+        text-align: center;
+        padding-top: 150px;
+    }
+    .formulario{
+        margin: 5px;
+        padding: 25px;
+        background-color: blanchedalmond;
+    }
+
+    .body{
+        font-family: Arial, Helvetica, sans-serif;
+    text-align: center;
+    margin: 40px;
+    }
+    a{
+    display: block;
+    margin-top: 10px;
+    font-size: 18px;
+    color: cadetblue;
+    text-decoration: none;
+}

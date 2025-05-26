@@ -1,16 +1,16 @@
 {
-  "name": "clase_05_05_2025v3",
+  "dependencies": {
+    "express": "^5.1.0"
+  },
+  "name": "tarea_26_05_2025",
   "version": "1.0.0",
-  "main": "index.js",
+  "main": "app.js",
+  "devDependencies": {},
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "keywords": [],
   "author": "",
   "license": "ISC",
-  "dependencies": {
-    "express": "^5.1.0",
-    "path": "^0.12.7"
-  },
   "description": ""
 }

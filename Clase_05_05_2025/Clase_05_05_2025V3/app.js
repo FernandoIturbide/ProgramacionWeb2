@@ -10,7 +10,7 @@ const app = espress();
 app.use("/",rutas);
 
 //Puerto
-const port = 6565;
+const port = 1313;
 
 app.listen(port, () => {
     console.log(`https://localhost:${port}`);
